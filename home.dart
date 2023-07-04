@@ -13,6 +13,9 @@ class Screen_Home extends StatefulWidget {
 }
 
 class _Screen_HomeState extends State<Screen_Home> {
+  //Date Time Picker
+  DateTime _date = DateTime.now();
+
   //Local Variabel
   TextEditingController destinasiController = TextEditingController();
   TextEditingController checkinController = TextEditingController();
@@ -60,9 +63,9 @@ class _Screen_HomeState extends State<Screen_Home> {
           height: 35.0,
           onPressed: () {
             //validasi jika username dan password empty maka tampilan error
-            if (destinasiController.text.isEmpty &&
-                checkinController.text.isEmpty &&
-                checkoutController.text.isEmpty &&
+            if (destinasiController.text.isEmpty ||
+                checkinController.text.isEmpty ||
+                checkoutController.text.isEmpty ||
                 guestsController.text.isEmpty) {
               showDialog(
                 context: context,
@@ -352,7 +355,7 @@ class _Screen_HomeState extends State<Screen_Home> {
                             Text(
                               item['title'],
                               style: TextStyle(
-                                fontSize: 16,
+                                fontSize: 13,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),

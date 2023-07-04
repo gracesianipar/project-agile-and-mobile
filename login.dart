@@ -1,6 +1,6 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
-import 'package:proyek/home.dart';
+import 'package:tugas_project_uas/home.dart';
 
 class Login_Screen extends StatefulWidget {
   const Login_Screen({super.key});
@@ -97,7 +97,7 @@ class _Login_ScreenState extends State<Login_Screen> {
       children: [
         Icon(
           Icons.facebook,
-          color: Colors.blue,
+          color: const Color.fromARGB(255, 10, 103, 180),
           size: 30,
         ),
         Padding(padding: EdgeInsets.only(right: 5)),
