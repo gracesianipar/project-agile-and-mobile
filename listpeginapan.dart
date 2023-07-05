@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:tugas_project_uas/beri_ulasan.dart';
 import 'package:tugas_project_uas/detail_list_penginapan.dart';
 import 'package:tugas_project_uas/listpenginapan_provider.dart';
 import 'package:flutter/src/widgets/navigator.dart';
@@ -9,6 +10,16 @@ import 'package:flutter/src/widgets/framework.dart';
 
 class ListPenginapan extends StatefulWidget {
   @override
+  final List<String> list_nama;
+  final List<String> list_comment;
+  final List<String> list_rating;
+
+  const ListPenginapan(
+      {Key? key,
+      required this.list_nama,
+      required this.list_comment,
+      required this.list_rating})
+      : super(key: key);
   State<ListPenginapan> createState() => _ListPenginapanState();
 }
 
@@ -67,7 +78,12 @@ body(BuildContext context) {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => DetailListPenginapan(item: item),
+                    builder: (context) => DetailListPenginapan(
+                      item: item,
+                      list_nama: list_nama,
+                      list_comment: list_comment,
+                      list_rating: list_rating,
+                    ),
                   ),
                 );
               },
@@ -129,7 +145,12 @@ body(BuildContext context) {
                                       //Berpindah ke halaman Detail Penginapan
                                       Navigator.push(context,
                                           MaterialPageRoute(builder: (context) {
-                                        return DetailListPenginapan(item: item);
+                                        return DetailListPenginapan(
+                                          item: item,
+                                          list_nama: list_nama,
+                                          list_comment: list_comment,
+                                          list_rating: list_rating,
+                                        );
                                       }));
                                     },
                                     child: Container(

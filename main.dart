@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tugas_project_uas/beri_ulasan.dart';
 import 'package:tugas_project_uas/home_provider.dart';
 import 'package:tugas_project_uas/home_provider2.dart';
 import 'package:tugas_project_uas/listpenginapan_provider.dart';
@@ -8,17 +9,31 @@ import 'package:provider/provider.dart';
 import 'package:flutter/widgets.dart';
 
 void main() {
-  runApp(MultiProvider(providers: [
-    //Provider untuk bagian list penginapan
-    ChangeNotifierProvider(create: (_) => ListPenginapanProvider()),
-    //Provider untuk bagian home
-    ChangeNotifierProvider(create: (_) => List_GambarProvider()),
-    ChangeNotifierProvider(create: (_) => List_GambarProvider2())
-  ], child: const MyApp()));
+  runApp(MultiProvider(
+      providers: [
+        //Provider untuk bagian list penginapan
+        ChangeNotifierProvider(create: (_) => ListPenginapanProvider()),
+        //Provider untuk bagian home
+        ChangeNotifierProvider(create: (_) => List_GambarProvider()),
+        ChangeNotifierProvider(create: (_) => List_GambarProvider2())
+      ],
+      child: MyApp(
+        list_nama: list_nama,
+        list_comment: list_comment,
+        list_rating: list_rating,
+      )));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final List<String> list_nama;
+  final List<String> list_comment;
+  final List<String> list_rating;
+
+  const MyApp(
+      {super.key,
+      required this.list_nama,
+      required this.list_comment,
+      required this.list_rating});
 
   // This widget is the root of your application.
   @override
@@ -38,7 +53,11 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Login_Screen(),
+      home: Login_Screen(
+        list_nama: list_nama,
+        list_comment: list_comment,
+        list_rating: list_rating,
+      ),
     );
   }
 }

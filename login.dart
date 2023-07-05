@@ -1,9 +1,18 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
+import 'package:tugas_project_uas/beri_ulasan.dart';
 import 'package:tugas_project_uas/home.dart';
 
 class Login_Screen extends StatefulWidget {
-  const Login_Screen({super.key});
+  final List<String> list_nama;
+  final List<String> list_comment;
+  final List<String> list_rating;
+
+  const Login_Screen(
+      {super.key,
+      required this.list_nama,
+      required this.list_comment,
+      required this.list_rating});
 
   @override
   State<Login_Screen> createState() => _Login_ScreenState();
@@ -83,7 +92,11 @@ class _Login_ScreenState extends State<Login_Screen> {
               });
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 //passing data ke another screen
-                return Screen_Home();
+                return Screen_Home(
+                  list_nama: list_nama,
+                  list_comment: list_comment,
+                  list_rating: list_rating,
+                );
               }));
             }
           },

@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:tugas_project_uas/beri_ulasan.dart';
 import 'package:tugas_project_uas/home_provider.dart';
 import 'package:tugas_project_uas/home_provider2.dart';
 
 import 'package:tugas_project_uas/listpeginapan.dart';
 
 class Screen_Home extends StatefulWidget {
-  const Screen_Home({super.key});
+  final List<String> list_nama;
+  final List<String> list_comment;
+  final List<String> list_rating;
+
+  const Screen_Home(
+      {super.key,
+      required this.list_nama,
+      required this.list_comment,
+      required this.list_rating});
 
   @override
   State<Screen_Home> createState() => _Screen_HomeState();
@@ -103,7 +112,11 @@ class _Screen_HomeState extends State<Screen_Home> {
               });
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 //passing data ke another screen
-                return ListPenginapan();
+                return ListPenginapan(
+                  list_nama: list_nama,
+                  list_comment: list_comment,
+                  list_rating: list_rating,
+                );
               }));
             }
           },

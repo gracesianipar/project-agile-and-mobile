@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:tugas_project_uas/beri_ulasan.dart';
 import 'package:tugas_project_uas/rincian_pesanan.dart';
 import 'package:tugas_project_uas/semua_ulasan.dart';
 
 class DetailListPenginapan extends StatefulWidget {
   final dynamic item;
-  const DetailListPenginapan({Key? key, required this.item}) : super(key: key);
+  final List<String> list_nama;
+  final List<String> list_comment;
+  final List<String> list_rating;
+
+  const DetailListPenginapan(
+      {Key? key,
+      required this.item,
+      required this.list_nama,
+      required this.list_comment,
+      required this.list_rating})
+      : super(key: key);
 
   @override
   State<DetailListPenginapan> createState() => _DetailListPenginapanState();
@@ -217,7 +228,11 @@ class _DetailListPenginapanState extends State<DetailListPenginapan> {
               onPressed: () {
                 // Berpindah ke halaman Detail Penginapan
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return Semua_Ulasan(item: widget.item);
+                  return Semua_Ulasan(
+                      item: widget.item,
+                      list_nama: list_nama,
+                      list_comment: list_comment,
+                      list_rating: list_rating);
                 }));
               },
               child: Container(
