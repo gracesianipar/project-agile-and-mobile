@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tugas_project_uas/beri_ulasan.dart';
-import 'package:tugas_project_uas/rincian_pesanan.dart';
+import 'package:tugas_project_uas/detail_pemesanan.dart';
 import 'package:tugas_project_uas/semua_ulasan.dart';
 
 class DetailListPenginapan extends StatefulWidget {
@@ -244,7 +244,7 @@ class _DetailListPenginapanState extends State<DetailListPenginapan> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 9,
-                    color: Colors.black,
+                    color: Colors.green,
                   ),
                 ),
               ),
@@ -318,7 +318,9 @@ class _DetailListPenginapanState extends State<DetailListPenginapan> {
               onPressed: () {
                 // Berpindah ke halaman Detail Penginapan
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return Rincian_Pesanan();
+                  return Rincian_Pesanan(
+                    item: widget.item,
+                  );
                 }));
               },
               child: Container(

@@ -23,6 +23,7 @@ class ListPenginapanProvider extends ChangeNotifier {
             "Bagus Bay Homestay memiliki teras, restaurant, dan bar di tuktuk. Homestay ini memiliki dan tempat parkiran pribadi gratis untuk Guests.",
         "desc2":
             "Bagus Bay Homestay memiliki teras, restaurant, dan bar di tuktuk. Homestay ini memiliki dan tempat parkiran pribadi gratis untuk Guests. Bagus Bay Homestay memiliki teras, restaurant, dan bar di tuktuk. Homestay ini memiliki dan tempat parkiran",
+        "metode_pemb": 'assets/mandiri.jpg',
       },
       {
         "judul": "Tuk - Tuk Timbul Bungalows",
@@ -38,6 +39,7 @@ class ListPenginapanProvider extends ChangeNotifier {
             "Bagus Bay Homestay memiliki teras, restaurant, dan bar di tuktuk. Homestay ini memiliki dan tempat parkiran pribadi gratis untuk Guests.",
         "desc2":
             "Bagus Bay Homestay memiliki teras, restaurant, dan bar di tuktuk. Homestay ini memiliki dan tempat parkiran pribadi gratis untuk Guests. Bagus Bay Homestay memiliki teras, restaurant, dan bar di tuktuk. Homestay ini memiliki dan tempat parkiran",
+        "metode_pemb": 'assets/mandiri.jpg',
       },
       {
         "judul": "Zoe`s Paradise Waterfront Hotel",
@@ -53,6 +55,7 @@ class ListPenginapanProvider extends ChangeNotifier {
             "Bagus Bay Homestay memiliki teras, restaurant, dan bar di tuktuk. Homestay ini memiliki dan tempat parkiran pribadi gratis untuk Guests.",
         "desc2":
             "Bagus Bay Homestay memiliki teras, restaurant, dan bar di tuktuk. Homestay ini memiliki dan tempat parkiran pribadi gratis untuk Guests. Bagus Bay Homestay memiliki teras, restaurant, dan bar di tuktuk. Homestay ini memiliki dan tempat parkiran",
+        "metode_pemb": 'assets/mandiri.jpg',
       },
       {
         "judul": "Tama View",
@@ -68,6 +71,7 @@ class ListPenginapanProvider extends ChangeNotifier {
             "Bagus Bay Homestay memiliki teras, restaurant, dan bar di tuktuk. Homestay ini memiliki dan tempat parkiran pribadi gratis untuk Guests.",
         "desc2":
             "Bagus Bay Homestay memiliki teras, restaurant, dan bar di tuktuk. Homestay ini memiliki dan tempat parkiran pribadi gratis untuk Guests. Bagus Bay Homestay memiliki teras, restaurant, dan bar di tuktuk. Homestay ini memiliki dan tempat parkiran",
+        "metode_pemb": 'assets/mandiri.jpg',
       },
     ]
   };

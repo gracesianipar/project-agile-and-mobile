@@ -177,12 +177,18 @@ class _Semua_UlasanState extends State<Semua_Ulasan> {
                                   borderRadius: BorderRadius.circular(10.0),
                                   color: Colors.blue,
                                 ),
-                                child: const Text(
-                                  '9.0',
-                                  style: TextStyle(
-                                    fontSize: 13,
-                                    color: Colors.white,
-                                  ),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: [
+                                    Icon(Icons.star, color: Colors.orange),
+                                    Text(
+                                      '9.0',
+                                      style: TextStyle(
+                                        fontSize: 13,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
@@ -270,12 +276,20 @@ class _Semua_UlasanState extends State<Semua_Ulasan> {
                                             BorderRadius.circular(10.0),
                                         color: Colors.blue,
                                       ),
-                                      child: Text(
-                                        list_rating[index],
-                                        style: TextStyle(
-                                          fontSize: 13,
-                                          color: Colors.white,
-                                        ),
+                                      child: Row(
+                                        children: [
+                                          Icon(
+                                            Icons.star,
+                                            color: Colors.orange,
+                                          ),
+                                          Text(
+                                            list_rating[index],
+                                            style: TextStyle(
+                                              fontSize: 13,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ],
